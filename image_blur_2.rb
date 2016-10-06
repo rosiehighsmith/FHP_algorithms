@@ -3,8 +3,8 @@ class Image
   # It requires multiple arrays
   def initialize(array)
     @array = array
-    # create a final array so the original array doesn't get changed
-    # and become all 1's
+    # create a final array so the original array 
+    # doesn't get changed and become all 1's
     @final_array = copy_array(array)
   end
 
