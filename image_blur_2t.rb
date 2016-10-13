@@ -1,19 +1,16 @@
 class Image
-  # this program looks around each 0 and if there's a 1
-  # the 0 changes to a 1 as well. Don't need to have
-  # multiple array with this method.
+  # This program looks around each 0 and if there's a 1
+  # the 0 changes to a 1 as well. Needs single array.
   def initialize(array)
-  # Allow one argument - the Image.new
     @array = array
   end
 
   def transform
     # In the array, each row is a subarray with the index r
-    # So length of the array is the num of rows/subarrays
+    # Length of the array = num of rows/subarrays
     @array.each_with_index do |subarray, r|
-
       # In each subarray/row there is a value (0 or 1) with the index c
-      # So length of subarray is # of columns
+      # Length of subarray = # of columns
       subarray.each_with_index do |value, c|
         # if the value above = 1 and I'm not in the 1st row
         if r-1 >= 0 &&  @array[r-1][c] == 1
@@ -34,10 +31,9 @@ class Image
           print 0
         end          
       end
-      # between each row put a new
+      # Separate each printed row
       puts ""
     end
-
   end
 end
 
