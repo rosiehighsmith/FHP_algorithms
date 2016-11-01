@@ -16,22 +16,11 @@ class Image
           c-1 > 0 && @array[r][c-1] == 1 || \
           c+1 < subarray.length && @array[r][c+1] == 1 ? 1:0
         end
+        puts ""
       end
       i += 1
     end
-    return @array
   end
-
-  def output_image
-    # Loop over array rows
-    @array.each_index do |i|
-
-        # Join each array row
-        joined = @array[i].join
-        puts joined
-    end
-  end
-
 end
 
 image = Image.new([
@@ -41,4 +30,3 @@ image = Image.new([
   [0,0,0,0]
 ])
 image.transform(2)
-image.output_image
