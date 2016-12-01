@@ -1,7 +1,6 @@
 # luhn solution with each_with_index loop
 module Luhn
   def self.is_valid?(number)
-    # breaks number into individual digits
     digits = number.to_s.chars.map(&:to_i).reverse
     sum = 0
     digits.each_with_index do |n, i|
