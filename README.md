@@ -8,4 +8,6 @@ These are my solutions to the Firehose Project challenges including:
 
 - Luhn Algorithm: Determine if credit card numbers are valid
 
+- Fibonacci Iterative & Recursive Methods: Carry out the Fibonacci sequence for n digits, including benchmarking to compare method speeds
+
 - Miscellaneous Advanced JavaScript Practice
