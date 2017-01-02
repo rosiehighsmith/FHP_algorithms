@@ -1,5 +1,4 @@
-# Find the input n that produces the longest chain 
-# of collatz values from 1 to 1,000,000. 
+# print the collatz sequence based on user input, n
 # n → n/2 (n is even)
 # n → 3n + 1 (n is odd)
 
@@ -17,5 +16,5 @@ while n != 1
   array << n
 end
 
-print "The longest collatz chain 1 - 1 million is " + array.length.to_s + " digits."
+print "Length of this array is " + array.length.to_s + " digits.\n"
 

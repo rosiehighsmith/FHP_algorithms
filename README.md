@@ -10,4 +10,6 @@ These are my solutions to the Firehose Project challenges including:
 
 - Fibonacci Iterative & Recursive Methods: Carry out the Fibonacci sequence for n digits, including benchmarking to compare method speeds
 
+- Collatz Algorithm: Determine the number with the longest [Collatz](https://en.wikipedia.org/wiki/Collatz_conjecture) sequence from 1 to 1 million
+
 - Miscellaneous Advanced JavaScript Practice
