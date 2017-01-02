@@ -7,11 +7,9 @@ class Image
   def output_image
     # Loop over array rows
     @array.each_index do |i|
-
         # Join each array row
         joined = @array[i].join
         puts joined
-
     end
   end
 
