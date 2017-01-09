@@ -5,6 +5,23 @@ class Tree
     @payload = payload
     @children = children
   end
+
+  def breadth_first(value)
+    queue = Queue.new
+    self.children.each { |child| queue.enqueue(child) }
+    payload = breadth_traversal(queue, value) until payload == value
+    payload
+  end
+
+  private
+
+  def breadth_traversal(queue, value)
+    current_node = queue.dequeue
+    return current_node.payload if current_node.payload == value
+    if current_node.children
+      current_node.children.each { |current_node_child| queue.enqueue(current_node_child) }
+    end
+  end
 end
 
 # The "Leafs" of a tree, elements that have no children
@@ -19,9 +36,9 @@ seventh_node = Tree.new(7, [sixth_node])
 shallow_fifth_node = Tree.new(5, [ninth_node])
 
 # The "Trunk" of the tree
-trunk   = Tree.new(2, [seventh_node, shallow_fifth_node])
+trunk = Tree.new(2, [seventh_node, shallow_fifth_node])
 
-class MyQueue
+class Queue
   def initialize
     @queue = []
   end
@@ -35,7 +52,7 @@ class MyQueue
   end
 end
 
-queue = MyQueue.new
+queue = Queue.new
 
 queue.enqueue(1)
 queue.enqueue(2)
@@ -49,3 +66,5 @@ puts queue.dequeue
 puts queue.dequeue
 puts queue.dequeue
 puts queue.dequeue
+
+puts true if 11 == trunk.breadth_first(11)

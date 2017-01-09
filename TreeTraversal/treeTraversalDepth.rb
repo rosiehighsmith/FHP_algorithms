@@ -5,8 +5,19 @@ class Tree
     @payload = payload
     @children = children
   end
-end
 
+  def depth_first(value, node = nil)
+    node ||= self
+    if node.payload == value
+      return node.payload
+    else
+      node.children.each do |child|
+        payload = depth_first(value, child)
+        return payload if payload == value
+      end
+    end
+  end
+end
 
 # The "Leafs" of a tree, elements that have no children
 deep_fifth_node = Tree.new(5, [])
@@ -21,3 +32,5 @@ shallow_fifth_node = Tree.new(5, [ninth_node])
 
 # The "Trunk" of the tree
 trunk   = Tree.new(2, [seventh_node, shallow_fifth_node])
+
+puts true if 11 == trunk.depth_first(11)
