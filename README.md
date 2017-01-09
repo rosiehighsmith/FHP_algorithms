@@ -12,4 +12,6 @@ These are my solutions to the Firehose Project challenges including:
 
 - Collatz Algorithm: Determine the number with the longest [Collatz](https://en.wikipedia.org/wiki/Collatz_conjecture) sequence from 1 to 1 million
 
+- Tree Traversal Algorithms: Build methods to complete depth and breadth first searches in a tree data structure
+
 - Miscellaneous Advanced JavaScript Practice
